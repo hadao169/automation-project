@@ -23,6 +23,11 @@ The repository includes four main automation projects:
 
 Each project contains its own **README.md** file detailing objectives, operation, and control logic.
 
+To download the project
+1. Go to: https://github.com/hadao169/automation-projects
+2. Click green "Code" button → "Download ZIP"
+3. Extract to your workspace
+4. Ready to use!
 ---
 
 ## Technology Stack
