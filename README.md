@@ -21,6 +21,9 @@ The repository includes four main automation projects:
 4. **NC Machine**  
    - Go to: [`/nc_machine/README.md`](projects/nc_machine/README.md)
 
+5. **UI for conveyor control**
+   - Go to [`/UI_ConveyorControl/README.md`](projects//UI_ConveyorControl/README.md)
+
 Each project contains its own **README.md** file detailing objectives, operation, and control logic.
 
 To download the project
