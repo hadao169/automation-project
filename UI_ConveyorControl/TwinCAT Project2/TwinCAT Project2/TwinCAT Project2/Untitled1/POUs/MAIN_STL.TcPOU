@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="MAIN_STL" Id="{39cd0ae7-c869-44d4-9729-c26ea1398b49}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN_STL
+VAR
+		// Nostimen tulot
+	iElevatorSensor AT %IX1.0: BOOL; // nostimen valoanturi
+	iElevatorIsLifted AT %IX1.1: BOOL; // nostin on ajettu ylärajalle
+	iElevatorIsDescended AT %IX1.2: BOOL; // nostin on ajettu alarajalle
+	iElevatorConveyorRunning AT %IX1.3: BOOL; // nostimen kuljetin pyörii
+	
+	// Kuljetin 2 tulot
+	iConveyor2Sensor AT %IX2.0: BOOL; // Valokenno kuljetin 2 ennen työnnintä
+	iPusherPushed AT %IX2.1: BOOL; // Työnnnin on ulkona
+	iPusherRetracted AT %IX2.2: BOOL; // Työnnin on sisällä
+	iConveyor2Running AT %IX2.3: BOOL; // kuljetin 2 pyörii
+	
+	// Kuljetin 1 tulot
+	iConveyor1Running AT %IX3.0: BOOL; // Kuljetin 1 pyörii
+	
+		// Kuljetin 1 lähdöt
+	qConveyor1 AT %QX0.0: BOOL; // Kuljetin 1 ajo
+	
+	// Nostimen lähdöt
+	qElevatorConveyor AT %QX1.0: BOOL; // Nostimen kuljetin ajo
+	qElevatorUp AT %QX1.1: BOOL; // Nostimen nosto ylös
+	qElevatorDown AT %QX1.2: BOOL; // Nostimen lasku alas
+	
+	// Kuljetin 2 lähdöt
+	qConveyor2 AT %QX2.0: BOOL; // Kuljetin 2 ajo 
+	qPusherPush AT %QX2.1: BOOL; // Työnnin eteen
+	qPusherRetract AT %QX2.2: BOOL; // Työnnin taakse
+	
+	// Laatikon lähtö 
+	qBoxShaker AT %QX3.0: BOOL; // Laatikon tärytin
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
